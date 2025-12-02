@@ -8,7 +8,6 @@ api.interceptors.response.use(
   },
   (error) => {
     if (error.response && error.response.status === 401) {
-      console.log("Token expirado ou inválido via Interceptor. Redirecionando...");
       if (window.location.pathname !== "/") {
           window.location.href = "/";
       }

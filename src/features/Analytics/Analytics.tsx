@@ -23,7 +23,7 @@ export function Analytics() {
     const [delExpense, setDelExpense] = useState(null);
     
     const arr = ["All", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep","Oct", "Nov", "Dec"]
-    const socket = io('http://localhost:3000'); 
+    const socket = io('https://front-bills.vercel.app'); 
 
     async function updateGasto(id: string, idCategory: number, type: number | null, Date: string, value: number) {
         if (!editingExpense) return;

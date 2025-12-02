@@ -19,7 +19,7 @@ export function Home() {
     const [dashboardData, setDashboardData] = useState(null);
     const [editingExpense, setEditingExpense] = useState(null);
     const [delExpense, setDelExpense] = useState(null);
-    const socket = io('http://localhost:3000'); 
+    const socket = io('https://front-bills.vercel.app'); 
 
     async function addGasto(id: string, idCategory: number, type: number | null, Date: string, value: number) {
 

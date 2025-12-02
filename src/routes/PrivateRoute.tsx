@@ -27,9 +27,7 @@ export function PrivateRoute({children} : PrivateRouteProps) {
     console.log(auth);
     return <Navigate to="/" />;
   }
-
   return children;
-
 }
 
 
