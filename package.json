@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit false && nest build --webpack",
+    "build": "nest build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
