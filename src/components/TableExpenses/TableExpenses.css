@@ -1,0 +1,78 @@
+.datas_expenses {
+    position: relative;
+    overflow-y: auto;
+    height: 34rem;
+}
+
+.No_result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f2f2;
+    padding: 5rem;
+    border-radius: 20px;
+    font-weight: 500;
+    height: 70%;
+    font-size: 3rem;
+}
+
+.card_table {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F9FAFB;
+    padding: 0.5rem 2rem 0.7rem 2rem;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+}
+
+.description_informations > .description_title {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+.description_informations > p {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.description {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.div_icon {
+    padding: 0;
+    margin: 0;
+}
+
+.icon {
+    background: rgb(68, 80, 99);
+    color: #F9FAFB;
+    text-align: center;
+    padding: 0.7rem;
+    border-radius: 15px;
+    width: 3.7rem;
+}
+
+.description_date {
+    color: rgb(172, 172, 172);
+}
+
+.card_table__value {
+    color: rgb(201, 0, 0);
+}
+
+.price_edit_remove {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}

@@ -1,0 +1,20 @@
+:root {
+  --font-size-anchor: 1.1rem;
+  --font-size-title: 1.9rem;
+  --font-size-subtitle: 1.2rem;
+  --font-size-input: 1.1rem;
+  --font-size-label: 1.1rem;
+  --font-size-button: 1.1rem;
+  --font-size-anchor-singIn: 1.1rem;
+}
+
+html, body {
+    font-family: 'Inter', sans-serif ;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}

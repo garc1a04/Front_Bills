@@ -1,0 +1,52 @@
+.card {
+    width: 100%;
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+.card_left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.card_icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card_title {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 0.5rem;
+}
+
+.card_value {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.card_subtext {
+    font-size: 1rem;
+    color: #e05a5a;
+}
+
+.card_badge {
+    background: #fdeeee;
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+}

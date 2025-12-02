@@ -1,0 +1,23 @@
+.anchor {
+  color: rgb(0, 81, 255);
+  text-decoration: none;
+  font-size: var(--font-size-anchor-singIn);
+}
+
+.anchor:hover {
+  text-decoration: underline;
+}
+
+.SignIn {
+  margin-top: 1.3rem;
+  text-align: center;
+  font-size: var(--font-size-anchor-singIn);
+}
+
+.errClass {
+  border-color: red;
+}
+
+.errPassword > div > div > * {
+  border-color: red;
+}

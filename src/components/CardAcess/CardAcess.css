@@ -1,0 +1,33 @@
+.card_acess {
+    text-align: center;
+    position: absolute;
+    top: 2%;
+    width: 40%;
+    left: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 1.3rem;
+    border-radius: 20px;
+    animation: fade_in_out normal 4s;
+}
+
+.card_acess > div {
+    border-radius: 15px;
+}
+
+
+@keyframes fade_in_out {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 100;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

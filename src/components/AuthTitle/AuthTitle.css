@@ -1,0 +1,34 @@
+
+
+.div_input_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.div_input_img__title {
+    font-size: 1.9rem;
+}
+
+.div_input_img__logo {
+    width: 6rem;
+    background-size: cover;
+    border-right: black solid 1px;
+    padding-right: 0.6rem;
+}
+
+.div_input__Title {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 0.3rem;
+    font-size: var(--font-size-title);
+}
+
+.subtitle {
+    color: rgb(109, 109, 109);
+    font-size: var(--font-size-subtitle);
+}

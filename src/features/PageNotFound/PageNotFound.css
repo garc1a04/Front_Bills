@@ -1,0 +1,31 @@
+.not_found {
+    background:
+        linear-gradient(#f1f1f1b9, #808080),
+        url("../../assets/AuthBackground.png");
+    
+
+    width: 100%;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+}
+
+.container_not_found {
+    width: 40%;
+    text-align: center;
+}
+
+.not_found__title {
+    font-size: 5rem;
+}
+
+.not_found__subtitle {
+
+}
+
+.not_found__p {
+
+}

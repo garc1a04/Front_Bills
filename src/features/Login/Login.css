@@ -1,0 +1,42 @@
+.forgot_div {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0rem 1rem 0rem;
+}
+
+.anchor {
+    color: rgb(0, 81, 255);
+    text-decoration: none;
+    font-size: var(--font-size-anchor);
+    padding-left: 0.3rem;
+}
+.anchor:hover {
+    text-decoration: underline;
+}
+
+.errAuth {
+    margin: 0;
+    padding-left: 1rem;
+    font-size: var(--font-size-anchor);
+}
+
+.SignUp {
+    margin-top: 1.3rem;
+    text-align: center;
+    font-size: var(--font-size-anchor)
+}
+
+.inputs {
+    position: relative;
+}
+
+.card_acess {
+    background-color: rgb(0, 185, 0);
+}
+
+.card_err {
+    background-color: rgb(216, 5, 5);
+}
