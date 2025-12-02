@@ -12,6 +12,7 @@ import plus from "../../assets/add.svg";
 import { api } from "../../service/api";
 import io from 'socket.io-client';
 import "./Home.css"
+import { socket } from "../../service/socket";
 
 export function Home() {
     const[isModal, setIsModal] = useState(false)
@@ -19,31 +20,29 @@ export function Home() {
     const [dashboardData, setDashboardData] = useState(null);
     const [editingExpense, setEditingExpense] = useState(null);
     const [delExpense, setDelExpense] = useState(null);
-    const socket = io('https://front-bills.vercel.app'); 
+    async function addGasto(id: string, idCategory: number, type: number | null, dateValue: string, value: number) {
+    if(!value || !idCategory) return;
+    try {
+        const payload = {
+            value: Number(value), 
+            type: !type ? 20 : Number(type),
+            id_category: Number(idCategory), 
+            date_payment: dateValue 
+        };
 
-    async function addGasto(id: string, idCategory: number, type: number | null, Date: string, value: number) {
+        console.log("Enviando payload:", payload); 
 
-        if(!value || !idCategory) {
-            return;
-        }
-
-        try {
-            const response = await api.post("/expenses", {
-                value: value,
-                type: !type ? 20 : type,
-                id_category: idCategory,
-                date_payment: Date,
-                idCategory: idCategory
-            }, { withCredentials: true });
-            
-            setIsModal(false);
-            loadDashboard();
-            return {ok: true}
-        } catch(e) {
-            setIsModal(false);
-            return {err: e}
-        }
+        const response = await api.post("/expenses", payload, { withCredentials: true });
+        
+        setIsModal(false);
+        loadDashboard();
+        return {ok: true}
+    } catch(e) {
+        console.error("Erro ao salvar:", e.response?.data?.message);
+        setIsModal(false);
+        return {err: e}
     }
+}
     
     async function updateGasto(id: string, idCategory: number, type: number | null, Date: string, value: number) {
         if (!editingExpense) return;
@@ -106,6 +105,10 @@ export function Home() {
     useEffect(() => {
         loadDashboard();
         socket.on('new-expense',() => {loadDashboard();});
+
+        return () => {
+            socket.off('new-expense');
+        };
     }, []);
 
     if (!dashboardData) return <p>Loading...</p>;

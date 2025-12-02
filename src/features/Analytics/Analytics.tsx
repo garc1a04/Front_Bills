@@ -10,6 +10,7 @@ import { api } from "../../service/api";
 import { ModalExpenses } from "../../components/ModalExpenses/ModalExpenses";
 import io from 'socket.io-client';
 import "./Analytics.css"
+import { socket } from "../../service/socket";
 
 export function Analytics() {
     const [year, setYear] = useState(new Date().getFullYear());
@@ -23,7 +24,6 @@ export function Analytics() {
     const [delExpense, setDelExpense] = useState(null);
     
     const arr = ["All", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep","Oct", "Nov", "Dec"]
-    const socket = io('https://front-bills.vercel.app'); 
 
     async function updateGasto(id: string, idCategory: number, type: number | null, Date: string, value: number) {
         if (!editingExpense) return;
@@ -113,6 +113,11 @@ export function Analytics() {
             loadDashboard(); 
             loadTable();
         });
+
+        return () => {
+            socket.off('new-expense', ()=> { loadDashboard(); 
+            loadTable();});
+        };
         
     }, [year, month, yearBar]);
 
